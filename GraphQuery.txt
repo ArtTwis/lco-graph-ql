@@ -1,0 +1,37 @@
+mutation{
+  createCourse(input: {
+    courseName:"GraphQL Bootcamp",
+    category: "DB Query",
+    price: 199,
+    language: "NodeJS",
+    email: "art.twis@gmail.com",
+    stack: MOBILE,
+    teachingAssists: [{
+      firstName: "Twinkle",
+      lastName: "Goyal",
+      experience: 4
+    },
+    {
+      firstName: "Karan",
+      lastName: "Aggarwal",
+      experience: 8
+    },
+    {
+      firstName: "Pulkit",
+      lastName: "Garg",
+      experience: 1
+    }]
+  }){
+    id,
+    courseName
+  }
+}
+
+query {
+  getCourse(id:"H1Sl3SAWdCVBJJeH50MYY"){
+    id
+    teachingAssists{
+      experience
+    }
+  }
+}
